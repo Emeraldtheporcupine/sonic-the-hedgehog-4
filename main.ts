@@ -621,6 +621,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.sign, function (sprite, otherSpr
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             `)
+        game.splash("Season Hill Zone", "Act 2")
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1134,6 +1135,7 @@ mySprite = sprites.create(assets.image`Sonic`, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
 controller.moveSprite(mySprite, 150, 0)
 mySprite.ay = 300
+game.splash("Season Hill Zone", "Act 1")
 info.setScore(0)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
 SonicSign = sprites.create(img`
@@ -1242,3 +1244,4 @@ let AnimalReleaser = sprites.create(img`
     .2222222.11555555555555555..2422
     ....22...15555555555555555..22..
     `, SpriteKind.Machine)
+tiles.placeOnTile(AnimalReleaser, tiles.getTileLocation(193, 1))
